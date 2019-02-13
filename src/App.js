@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
+// import logo from './logo.svg';
 import './App.scss'
-import { Route, Link } from 'react-router-dom'
+import Header from './Header'
+import MemeGenerator from './MemeGenerator'
 
-const Dashboard = () => (
-  <div>
-    <h3>Dashboard</h3>
-    <p>This is separate route.</p>
-  </div>
-)
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
 
-const App = () => (
-  <div>
-    <nav>
-      <Link to="/dashboard">Dashboard</Link>
-    </nav>
-    <h1>Welcome to React!</h1>
-    <div>
-      <Route path="/dashboard" component={Dashboard}/>
-    </div>
-  </div>
-)
+        <Header />
+        <MemeGenerator />
+      </div>
+    )
+  }
+}
 
 export default App
